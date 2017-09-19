@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 85px">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="vendor.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body style="height: 85px">
+    <div class="container">
+        <div class="row" style="padding-left:10px">
+            <input type="checkbox" id="notifyOnStatusChange">
+            <label style="vertical-align: middle"> Show desktop notification on status change </label>
+        </div>
+        <div class="row" style="padding-left:10px">
+            <input type="checkbox" id="notifyOnEveryPoll">
+            <label style="vertical-align: middle"> Show desktop notification on every poll </label>
+        </div>
+        <div class="row">
+            <div id="col-md-12">
+                <hr class="style-six" />
+            </div>
+        </div>
+        <div class="row" style="padding-left:5px">
+            <div class="alignleft">
+                <button id="save">Save</button>
+                <button id="close">Close</button>
+            </div>
+            <div class="alignright">
+                <div id="status"></div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <!-- Below script link should be at the bottom instead of head, as DOM needs to be loaded before executing the script -->
+    <script src="options.js"></script>
+</body>
+
+</html>

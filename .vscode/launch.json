@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}",
+            "outFiles": ["${workspaceRoot}/dist/*.js"]
+        },
+        {
+			// Name of configuration; appears in the launch configuration drop down menu.
+			"name": "Run mocha",
+			// Type of configuration. Possible values: "node", "mono".
+			"type": "node",
+			// Workspace relative or absolute path to the program.
+			"program": "/Users/utkarsh/node_modules/mocha/bin/_mocha",
+			// Automatically stop program after launch.
+			"stopOnEntry": false,
+			// Command line arguments passed to the program.
+			"args": ["test/unit.js"],
+			// Workspace relative or absolute path to the working directory of the program being debugged. Default is the current workspace.
+			"cwd": ".",
+			// Workspace relative or absolute path to the runtime executable to be used. Default is the runtime executable on the PATH.
+			"runtimeExecutable": null,
+			// Environment variables passed to the program.
+			"env": { "NODE_ENV": "production"}
+		}
+    ]
+}

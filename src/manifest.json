@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "VSTS Status Monitor",
+  "short_name":"VSTS Status Monitor",
+  "description": "A Google Chrome extension to monitor Visual Studio Team Services (VSTS) status. Know if VSTS is up, or down right from your browser.",
+  "version": "0.0.1",
+  "offline_enabled": false,
+  "browser_action": {
+    "default_icon": "icons/vsts-sm-16x16.png",
+    "default_popup": "popup.html"
+  },
+   "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "background": {
+    "scripts": [
+      "vendor.js",
+      "background.js"
+    ],
+    "persistance": true
+  },
+  "icons": {
+    "16": "icons/vsts-sm-16x16.png",
+    "48": "icons/vsts-sm-48x48.png",
+    "128": "icons/vsts-sm-128x128.png"
+  },
+  "permissions": [
+    "storage",
+    "notifications",
+    "https://www.visualstudio.com/*"
+  ]
+}
